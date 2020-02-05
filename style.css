@@ -1,0 +1,14 @@
+.container {
+    background-color: black;
+}
+
+#card-1 {
+    height: 550px;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 240px;
+}
