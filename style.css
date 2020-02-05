@@ -1,0 +1,21 @@
+.container {
+    min-height: 100%;
+    margin-bottom: -70px;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    background: #666666;
+    border-top: 8px solid #4aaaa5;
+    margin-top: 20px;
+}
+
+.footer,
+.push {
+    height: 70px;
+}
+
+.modal {
+    margin-bottom: 20px;
+}

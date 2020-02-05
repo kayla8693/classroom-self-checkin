@@ -1,0 +1,13 @@
+submit button: saves student name and status in local storage, + sends it to "studentDiv"; pulls student picture and populates to imgDiv
+
+    prompts modal window w student name as title and message relaying status e.g. on-time, tardy, marked absent
+    if "studentName" val = ""/null, prompt error message/modal to enter name; or just do nothing
+
+    if name already submitted, or in students array, nothing happens, or modal message You are already marked as "data-status"; if data-status = absent, further message
+    create empty array: students[]; push each entered name into student array
+
+    or have initial array of students in class, and check entered name against studentList array
+    2 arrays? studentList w populated students, and empty newStudent
+
+if "absent" student tries to check-in, modal w name and "Go see teacher" message
+    use data-status?
