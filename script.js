@@ -1,3 +1,4 @@
+
 //Start coding
 
 $(document).ready(function () {
@@ -49,3 +50,4 @@ $(".start-btn").on("click", function (event) {
     //div id = "main-screen"
    // $( ".main-screen" ).hide();
 })
+
