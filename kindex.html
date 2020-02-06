@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -40,75 +40,75 @@
     <div class="container">
         <br><br>
 
-      <button type="button" class="btn btn-primary" id="submit">Start</button>
-      <br>
-      <br>
+        <button type="button" class="btn btn-primary" id="submit">Start</button>
+        <br>
+        <br>
 
-      <br>
-      <div class="d-flex justify-content-center">.
-          <div class="row">
-              <div class="card" id="card-1" style="width: 40rem;">
-                  <div class="card-body">
-                      <h5 class="card-header">Student Check In</h5>
-                      <br>
-                      <div class="row">
+        <br>
+        <div class="d-flex justify-content-center">.
+            <div class="row">
+                <div class="card" id="card-1" style="width: 40rem;">
+                    <div class="card-body">
+                        <h5 class="card-header">Student Check In</h5>
+                        <br>
+                        <div class="row">
 
-                          <div class="col-md-5">
-                              <img id="main-bio-pic" src="images/Me.jpg" alt="Randy Vaca" />
-                          </div>
-                          <div class="col-md-7">
-                              <p id="firstName">Fisrt Name:</p>
-                              <p id="lastName">Last Name:</p>
-                              <p id="DOB">DOB:</p>
-                          </div>
-                      </div>
-                      <br>
-                      <br>
-                      <form class="form-inline">
-                          <label for="inputCity" class="sr-only">City</label>
-                          <input class="form-control" type="text" id="inputName" placeholder="Students Name">
-                          <i class="fas fa-search fa-md btn btn-primary" id="searchName"></i>
-                      </form>
-                  </div>
-              </div>
-              <br>
-              <div class="col-md-3">
-                  <div class="card" id="card-2" style="width: 18rem;">
-                      <div class="card-body">
-                          <h5 class="card-header">Weather</h5>
-                          <ul style="list-style-type:none;">
-                              <form class="form-inline">
-                                  <h3 id="city">City</h3>
-                                  <h3 id="date"></h3>
-                                  <img id="icon"></img>
-                              </form>
-                              <br>
-                              <li id="temp">Tempature:</li>
-                              <br>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="card" id="card-2" style="width: 18rem;">
-                      <div class="card-body">
-                          <h5 class="card-header">Students</h5>
-                          <ul style="list-style-type:none;" id="listSudents">
-                              <li id="student">students</li>
+                            <div class="col-md-5">
+                                <img id="main-bio-pic" src="images/Me.jpg" alt="Randy Vaca" />
+                            </div>
+                            <div class="col-md-7">
+                                <p id="firstName">Fisrt Name:</p>
+                                <p id="lastName">Last Name:</p>
+                                <p id="DOB">DOB:</p>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <form class="form-inline">
+                            <!-- <label for="inputCity" class="sr-only">City</label> -->
+                            <input class="form-control" type="text" id="inputName" placeholder="Student's Name" >
+                            <i class="fas fa-search fa-md btn btn-primary" id="searchName" data-toggle="modal" data-target="#exampleModal"></i>
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-3">
+                    <div class="card" id="card-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-header">Weather</h5>
+                            <ul style="list-style-type:none;">
+                                <form class="form-inline">
+                                    <h3 id="city">City</h3>
+                                    <h3 id="date"></h3>
+                                    <img id="icon"></img>
+                                </form>
+                                <br>
+                                <li id="temp">Tempature:</li>
+                                <br>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card" id="card-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-header">Students</h5>
+                            <ul style="list-style-type:none;" id="listSudents">
+                                <li id="student">students</li>
 
 
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <br>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
 
 
 
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Check-In
-        </button>
+        </button> -->
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
