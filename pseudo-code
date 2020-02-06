@@ -11,3 +11,10 @@ submit button: saves student name and status in local storage, + sends it to "st
 
 if "absent" student tries to check-in, modal w name and "Go see teacher" message
     use data-status?
+
+make object??:
+var students = {
+    firstName: 'John",
+    lastName: 'Doe",
+    dob: 01/01/1993
+}
