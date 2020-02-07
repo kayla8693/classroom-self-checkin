@@ -1,8 +1,17 @@
 
 //Start coding
 
+  
+$(document).ready(function(){
+    $("#submit").click(function(){
+      $("#myModal").modal();
+    });
+  });
+
 $(document).ready(function () {
 
+    
+    var apiKey = 'a06d53a4d8132cb2c57dac5818e92924'
     console.log("ready");
 
     //Code for date in moment.js
