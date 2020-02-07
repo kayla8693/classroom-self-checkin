@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <!-- <a class="nav-item nav-link" href="#">Features</a> -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <br><br>
+
+        <button type="button" class="btn btn-primary" id="submit">Start</button>
+        <br>
+        <br>
+
+        <br>
+        <div class="d-flex justify-content-center">.
+            <div class="row">
+                <div class="card" id="card-1" style="width: 40rem;">
+                    <div class="card-body">
+                        <h5 class="card-header">Student Check In</h5>
+                        <br>
+                        <div class="row">
+
+                            <div class="col-md-5">
+                                <img id="main-bio-pic" src="images/Me.jpg" alt="Randy Vaca" />
+                            </div>
+                            <div class="col-md-7">
+                                <p id="firstName">Fisrt Name:</p>
+                                <p id="lastName">Last Name:</p>
+                                <p id="DOB">DOB:</p>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <form class="form-inline">
+                            <!-- <label for="inputCity" class="sr-only">City</label> -->
+                            <input class="form-control" type="text" id="inputName" placeholder="Student's Name" >
+                            <i class="fas fa-search fa-md btn btn-primary" id="searchName" data-toggle="modal" data-target="#exampleModal"></i>
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-3">
+                    <div class="card" id="card-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-header">Weather</h5>
+                            <ul style="list-style-type:none;">
+                                <form class="form-inline">
+                                    <h3 id="city">City</h3>
+                                    <h3 id="date"></h3>
+                                    <img id="icon"></img>
+                                </form>
+                                <br>
+                                <li id="temp">Tempature:</li>
+                                <br>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card" id="card-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-header">Students</h5>
+                            <ul style="list-style-type:none;" id="listSudents">
+                                <li id="student">students</li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Check-In
+        </button> -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Student Name</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Hello "studentName". You are on time!
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="push"></div>
+
+    </div>
+
+    <footer class="footer"></footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+body {
+    background-image: url('img/Back-to-School-HD-Wallpaper.jpg');
+}
+
+.container {
+    min-height: 100%;
+    margin-bottom: -70px;
+    /* background-image: url("/img/Back-to-School-HD-Wallpaper.jpg"); */
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    background: #666666;
+    border-top: 8px solid #4aaaa5;
+    margin-top: 20px;
+}
+
+.footer,
+.push {
+    height: 70px;
+}
+
+.modal {
+    margin-bottom: 20px;
+}
+
+#card-1 {
+    height: 550px;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 240px;
+}
