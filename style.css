@@ -7,6 +7,16 @@ body {
     margin-bottom: -70px;
 }
 
+.navbar-text {
+    float: right;
+}
+
+#currentDay {
+color: white;
+
+}
+
+
 footer {
     position: relative;
     bottom: 0;
