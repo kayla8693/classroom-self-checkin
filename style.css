@@ -5,7 +5,6 @@ body {
 .container {
     min-height: 100%;
     margin-bottom: -70px;
-    /* background-image: url("/img/Back-to-School-HD-Wallpaper.jpg"); */
 }
 
 footer {
@@ -45,14 +44,27 @@ img {
 }
 
 #listName {
-    /* margin-top: 10px;
-    margin-left: 20px; */
     margin: 15px;
     font-size: 30px;
-    /* text-decoration: underline; */
     font-weight: 500;
+    border: solid darkslategray;
+    padding: 0 12px 5px 12px;
 }
 
-/* #listStudents {
-    font-size: 24px;
-} */
+.modal-header, h4, .close {
+    background-color: #5cb85c;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
+  }
+.modal-footer {
+    background-color: #f9f9f9;
+}
+
+.modal-header {
+    padding: 35px 50px;
+}
+
+.modal-body {
+    padding: 40px 50px;
+}

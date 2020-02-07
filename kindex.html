@@ -35,19 +35,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
 
-                <!-- <a class="nav-item nav-link" href="#">Features</a> -->
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <br><br>
-
-        <!-- <button type="button" class="btn btn-primary" id="submit">Start</button> -->
-        <br>
-        <br>
 
         <br>
         <div class="d-flex justify-content-center">.
@@ -63,21 +56,9 @@
 
                         <div class="row">
 
-
-                            <!-- <div class="col-md-5">
-                                <img id="main-bio-pic" src="images/Me.jpg" alt="Randy Vaca" />
-                            </div> -->
-                            <!-- <div class="col-md-7">
-                                <p id="firstName">Fisrt Name:</p>
-                                <p id="lastName">Last Name:</p>
-                                <p id="DOB">DOB:</p>
-                            </div> -->
-
-                            <div class="col-md-4">
-                                <!-- <h5 id="listName">Students</h5> -->
-                                <div id="listName" class="rounded">Students</div>
+                            <div class="studentStatus">
+                                <div id="listName" class="rounded">Student-Status</div>
                                 <ul style="list-style-type:circle;" id="listStudents">
-                                    <!-- <br> -->
                                     <li id="student">students</li>
                                     <li>new student</li>
 
@@ -87,11 +68,6 @@
                         </div>
                         <br>
                         <br>
-                        <!-- <form class="form-inline">
-                            <label for="inputCity" class="sr-only">City</label>
-                            <input class="form-control" type="text" id="inputName" placeholder="Student's Name" >
-                            <i class="fas fa-search fa-md btn btn-primary" id="searchName" data-toggle="modal" data-target="#exampleModal"></i>
-                        </form> -->
                     </div>
                 </div>
                 <br>
@@ -111,49 +87,48 @@
                         </div>
                     </div>
                     <br>
-                    <div class="card" id="card-2" style="width: 18rem;">
-                        <div class="card-body">
-                            <!-- <h5 class="card-header">Students</h5>
-                            <ul style="list-style-type:none;" id="listSudents">
-                                <li id="student">students</li>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br>
 
 
-                            </ul> -->
+
+    <!-- Trigger the modal with a button -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4><span class="glyphicon glyphicon-lock"></span> Check-In</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Student Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Student Name">
                         </div>
-                    </div>
+                        <button type="submit" class="btn btn-success btn-block"><span
+                                class="glyphicon glyphicon-off"></span> Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span
+                            class="glyphicon glyphicon-remove"></span> Cancel</button>
                 </div>
             </div>
+
         </div>
-        <br>
+    </div>
 
-
-
-        <!-- Button trigger modal -->
-        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Check-In
-        </button> -->
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Student Name</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        Hello "studentName". You are on time!
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="push"></div>
+    <div class="push"></div>
 
     </div>
 
