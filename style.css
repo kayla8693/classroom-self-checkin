@@ -61,7 +61,7 @@ img {
     padding: 0 12px 5px 12px;
 }
 
-.modal-header, h4, .close {
+.modal-header, .close {
     background-color: #5cb85c;
     color:white !important;
     text-align: center;
@@ -77,4 +77,13 @@ img {
 
 .modal-body {
     padding: 40px 50px;
+}
+
+h4 {
+    margin-left: 90px;
+    font-size: 40px;
+}
+
+.fa-lock {
+    margin-right: 10px;
 }
