@@ -8,6 +8,16 @@ body {
     /* background-image: url("/img/Back-to-School-HD-Wallpaper.jpg"); */
 }
 
+.navbar-text {
+    float: right;
+}
+
+#currentDay {
+color: white;
+
+}
+
+
 footer {
     position: relative;
     bottom: 0;
