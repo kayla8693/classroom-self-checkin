@@ -12,14 +12,14 @@ $(document).ready(function () {
         url: "https://api.openweathermap.org/data/2.5/weather",
         dataType: "json",
         method: "GET",
-        data: { q: city, appid: apiKey, units: "metric" },
+        data: { q: city, appid: apiKey, units: "imperial" },
 
         success: function (data) {
             console.log(data);
             var forecast = "";
             $.each(data.weather, function (index, val) {
                 forecast += "<p><b>" + data.name + "</b><img src=" + val.icon + ".png></p>" +
-                    data.main.temperature + "&deg;C" + "|" + val.main + ", " + val.description
+                    data.main.temperature + "&deg;F" + "|" + val.main + ", " + val.description
             });
 
             $("#current-section").html(forecast);
@@ -49,3 +49,24 @@ $(".start-btn").on("click", function (event) {
     //div id = "main-screen"
    // $( ".main-screen" ).hide();
 })
+
+//Local Storage //Put in the very beginning
+var events = ["","","","","","","","",""]
+events = JSON.parse(localStorage.getItem("events")) || {};
+
+//Local Storage//Can be placed in a different place
+
+$(document).on("click", ".saveBtn", function (event) {
+    event.preventDefault();
+    console.log(this);
+    var userInput = $(this).siblings(".description").val();
+
+    var hour = $(this).attr("id");
+
+    console.log("hour", hour);
+    events[hour] = userInput;
+    console.log("events", events);
+    localStorage.setItem("events", JSON.stringify(events));
+
+})
+});
