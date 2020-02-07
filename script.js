@@ -2,12 +2,12 @@
 //Start coding
 
 $(document).ready(function () {
-
+    var apiKey = 'a06d53a4d8132cb2c57dac5818e92924'
     console.log("ready");
-    
-//Code for weather with click button
-//Need to download the images for this part of code from openweather website and
-//work on click button code if there is no button in index file. Need to change the names and ids.
+
+    //Code for weather with click button
+    //Need to download the images for this part of code from openweather website and
+    //work on click button code if there is no button in index file. Need to change the names and ids.
 
     $.ajax({
         url: "https://api.openweathermap.org/data/2.5/weather",
@@ -48,6 +48,6 @@ console.log(m.format("dddd, MMMM Do YYYY h:mm:ss a"));
 $(".start-btn").on("click", function (event) {
     event.preventDefault();
     //div id = "main-screen"
-   // $( ".main-screen" ).hide();
+    // $( ".main-screen" ).hide();
 })
 

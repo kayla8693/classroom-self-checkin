@@ -35,3 +35,24 @@ img {
     padding: 5px;
     width: 240px;
 }
+
+.book {
+    margin-left: 15px;
+}
+
+.fa-2x {
+    margin-right: 25px;
+}
+
+#listName {
+    /* margin-top: 10px;
+    margin-left: 20px; */
+    margin: 15px;
+    font-size: 30px;
+    /* text-decoration: underline; */
+    font-weight: 500;
+}
+
+/* #listStudents {
+    font-size: 24px;
+} */
