@@ -1,4 +1,5 @@
 //Start coding
+
 $(document).ready(function () {
   $("#submit").click(function () {
     $("#myModal").modal();
@@ -21,6 +22,22 @@ $(document).ready(function () {
 
   console.log("ready");
 
+  
+      // ------------------------------------------------------------------------------------------------
+
+    // variable name  
+    var name = "randy";
+    // Creating an AJAX call for the specific name to identify gender
+    var queryURL = "https://gender-api.com/get?name=" + name + "&country=US&key=uQRWjsZJRjvpRFcAqV";
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+
+        console.log(response);
+
+    });
   //Code for date in moment.js
 
   var m = moment();
@@ -57,6 +74,7 @@ $(document).ready(function () {
           console.log(data);
           console.log(forecast);
           forecast += " |<br> " + "UVI: " + data.value
+
 
           $("#current-section").html(forecast);
         }

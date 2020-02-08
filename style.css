@@ -1,4 +1,3 @@
-
 body {
     background-image: url('img/Back-to-School-HD-Wallpaper.jpg');
 }
@@ -13,8 +12,7 @@ body {
 }
 
 #currentDay {
-color: white;
-
+    color: white;
 }
 
 a.footer {
@@ -67,12 +65,14 @@ img {
     padding: 0 12px 5px 12px;
 }
 
-.modal-header, .close {
+.modal-header,
+.close {
     background-color: #5cb85c;
-    color:white !important;
+    color: white !important;
     text-align: center;
     font-size: 30px;
-  }
+}
+
 .modal-footer {
     background-color: #f9f9f9;
 }
