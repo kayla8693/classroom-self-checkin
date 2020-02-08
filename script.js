@@ -1,27 +1,25 @@
-
 //Start coding
-
-  
-$(document).ready(function(){
-    $("#submit").click(function(){
-      $("#myModal").modal();
-    });
-  });
-
 $(document).ready(function () {
 
-    
-    var apiKey = 'a06d53a4d8132cb2c57dac5818e92924'
-    console.log("ready");
+    $("#submit").click(function () {
+        $("#myModal").modal();
+    });
 
-    //Code for date in moment.js
+    // running clock
+    setInterval(function () {
+        var apiKey = 'a06d53a4d8132cb2c57dac5818e92924'
 
-    var m = moment();
-    var curDay = m.format("dddd, MMMM Do YYYY h:mm:ss a");
-    console.log(m.format("dddd, MMMM Do YYYY h:mm:ss a"));
+        //Code for date in moment.js
 
-    $("#currentDay").text(curDay);
-})
+        var m = moment();
+        var curDay = m.format("dddd, MMMM Do YYYY h:mm:ss A");
+        console.log(curDay);
+
+        $("#currentDay").text(curDay);
+
+    // updates clock every 1 second
+    }, 1000);
+});
 
     //Code for weather with click button
     //Need to download the images for this part of code from openweather website and
