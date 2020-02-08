@@ -1,5 +1,35 @@
+body {
+    background-image: url('img/Back-to-School-HD-Wallpaper.jpg');
+}
+
 .container {
-    background-color: black;
+    min-height: 100%;
+    margin-bottom: -70px;
+}
+
+.navbar-text {
+    float: right;
+}
+
+#currentDay {
+    color: white;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    background: #666666;
+    border-top: 8px solid #4aaaa5;
+    margin-top: 20px;
+}
+
+.footer,
+.push {
+    height: 70px;
+}
+
+.modal {
+    margin-bottom: 20px;
 }
 
 #card-1 {
@@ -11,4 +41,49 @@ img {
     border-radius: 4px;
     padding: 5px;
     width: 240px;
+}
+
+.book {
+    margin-left: 15px;
+}
+
+.fa-2x {
+    margin-right: 25px;
+}
+
+#listName {
+    margin: 15px;
+    font-size: 30px;
+    font-weight: 500;
+    border: solid darkslategray;
+    padding: 0 12px 5px 12px;
+}
+
+.modal-header,
+.close {
+    background-color: #5cb85c;
+    color: white !important;
+    text-align: center;
+    font-size: 30px;
+}
+
+.modal-footer {
+    background-color: #f9f9f9;
+}
+
+.modal-header {
+    padding: 35px 50px;
+}
+
+.modal-body {
+    padding: 40px 50px;
+}
+
+h4 {
+    margin-left: 90px;
+    font-size: 40px;
+}
+
+.fa-lock {
+    margin-right: 10px;
 }
