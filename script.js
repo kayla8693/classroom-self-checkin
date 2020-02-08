@@ -1,50 +1,57 @@
-
 //Start coding
-
-  
-$(document).ready(function(){
-    $("#submit").click(function(){
-      $("#myModal").modal();
-    });
+$(document).ready(function () {
+  $("#submit").click(function () {
+    $("#myModal").modal();
   });
 
+
 $(document).ready(function () {
+  console.log("ready");
 
-    
-    var apiKey = 'a06d53a4d8132cb2c57dac5818e92924'
-    console.log("ready");
+  //Code for date in moment.js
 
-    //Code for date in moment.js
+  var m = moment();
+  var curDay = m.format("dddd, MMMM Do YYYY h:mm:ss a");
+  console.log(m.format("dddd, MMMM Do YYYY h:mm:ss a"));
 
-    var m = moment();
-    var curDay = m.format("dddd, MMMM Do YYYY h:mm:ss a");
-    console.log(m.format("dddd, MMMM Do YYYY h:mm:ss a"));
-
-    $("#currentDay").text(curDay);
+  $("#currentDay").text(curDay);
 })
 
-    //Code for weather with click button
-    //Need to download the images for this part of code from openweather website and
-    //work on click button code if there is no button in index file. Need to change the names and ids.
 
-//    //$.ajax({
-//         url: "https://api.openweathermap.org/data/2.5/weather",
-//         dataType: "json",
-//         method: "GET",
-//         data: { q: city, appid: apiKey, units: "imperial" },
+//Weather API Call
 
-//         success: function (data) {
-//             console.log(data);
-//             var forecast = "";
-//             $.each(data.weather, function (index, val) {
-//                 forecast += "<p><b>" + data.name + "</b><img src=" + val.icon + ".png></p>" +
-//                     data.main.temperature + "&deg;F" + "|" + val.main + ", " + val.description
-//             });
 
-//             $("#current-section").html(forecast);
-//         }
-//     })
-// })
+var apiKey = '13002b03031d9418e8a4593147cb8d89';
+var location = "Dallas, US";
+
+
+$.ajax({
+  url: "https://api.openweathermap.org/data/2.5/weather",
+  dataType: "json",
+  method: "GET",
+  data: { q: location, appid: apiKey, units: "imperial" },
+
+  success: function (data) {
+    console.log(data);
+    var forecast = "";
+
+    forecast += "<p><b>" + data.name + " </b><img class='imgWeather' src=\"http://openweathermap.org/img/w/" + data.weather[0].icon + ".png\"></p>" +
+      " Temperature: " + data.main.temp + "&deg;F" + " | " + " Wind speed: " + data.wind.speed + " | Humidity: " + data.main.humidity + "%"
+
+    $.ajax({
+      url: "http://api.openweathermap.org/data/2.5/uvi",
+      dataType: "json",
+      method: "GET",
+      data: { appid: apiKey, ...data.coord },
+      success: function (data) {
+        console.log(data);
+        console.log(forecast);
+        forecast += " |<br> " + "UVI: " + data.value
+
+        $("#current-section").html(forecast);
+      }
+    })
+
 
 
 // //Div class container should have two div ids:
@@ -72,6 +79,9 @@ $(document).ready(function () {
 //     events[hour] = userInput;
 //     console.log("events", events);
 //     localStorage.setItem("events", JSON.stringify(events));
-
+// }
 // })
-
+// })
+  }
+  })
+  })

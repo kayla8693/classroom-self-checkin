@@ -34,7 +34,7 @@
         </button>
 
         <!-- <a class="nav-item nav-link" href="#">Features</a> -->
-        
+
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
             <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
@@ -46,59 +46,47 @@
 
     <div class="container">
 
-        <br>
         <div class="d-flex justify-content-center">.
             <div class="row">
-                <div class="card" id="card-1" style="width: 40rem;">
-                    <div class="card-body">
-                        <h5 class="card-header">
-                            <button type="button" class=" col-md-4 btn btn-primary" id="submit">Student
-                                Check-In</button>
-
-                            <i class="fas fa-book-reader book fa-lg"></i>
-                        </h5>
-
-                        <div class="row">
-
-                            <div class="studentStatus">
-                                <div id="listName" class="rounded">Student-Status</div>
-                                <ul style="list-style-type:circle;" id="listStudents">
-                                    <li id="student">students</li>
-                                    <li>new student</li>
+                <div class="col-md-9">
 
 
-                                </ul>
+                    <div class="card" id="card-1" style="width: 40rem;">
+                        <div class="card-body">
+                            <h5 class="card-header">
+                                <button type="button" class=" col-md-4 btn btn-primary" id="submit">Student
+                                    Check-In</button>
+
+                                <i class="fas fa-book-reader book fa-lg"></i>
+                            </h5>
+
+                            <div class="row">
+                                <div class="studentStatus">
+                                    <div id="listName" class="rounded">Student-Status</div>
+                                    <ul style="list-style-type:circle;" id="listStudents">
+                                        <li id="student">students</li>
+                                        <li>new student</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                
-
                     </div>
+
                 </div>
-                <br>
-                <div class="col-md-3">
-                    <div class="card" id="card-2" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-header">Weather</h5>
-                            <ul style="list-style-type:none;">
-                                <form class="form-inline">
-                                    <h3 id="city">City</h3>
-                                    <h3 id="date"></h3>
-                                    <img id="icon"></img>
-                                </form>
-                                <br>
-                                <li id="temp">Tempature:</li>
-                                <br>
-                        </div>
-                    </div>
-                    <br>
 
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header"><strong>School Day Weather:</strong></div>
+                        <div class="card-body" id="current-section"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    <br>
 
+    </div>
+    </div>
+    </div>
 
 
     <!-- Trigger the modal with a button -->
@@ -116,7 +104,8 @@
                 <div class="modal-body">
                     <form role="form">
                         <div class="form-group">
-                            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Student Name</label>
+                            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Student
+                                Name</label>
                             <input type="text" class="form-control" id="name" placeholder="Student Name">
                         </div>
                         <button type="submit" class="btn btn-success btn-block"><span
@@ -125,7 +114,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span
-                            class="glyphicon glyphicon-remove"></span> Cancel</button>
+                            class="glyphicon glyphicon-remove"></span>
+                        Cancel</button>
                 </div>
             </div>
 
@@ -136,8 +126,11 @@
 
     </div>
 
-    <footer class="footer"></footer>
+    <!-- <footer class="footer"></footer>-->
 
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        <a class="footer">Copyright©</a>
+    </nav>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
@@ -159,6 +152,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <script src="moment.js"></script>
+
     <script src="script.js"></script>
 </body>
 
