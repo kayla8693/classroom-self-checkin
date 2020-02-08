@@ -15,13 +15,14 @@ body {
     color: white;
 }
 
-footer {
-    position: relative;
-    bottom: 0;
-    background: #666666;
-    border-top: 8px solid #4aaaa5;
-    margin-top: 20px;
-}
+a.footer {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    margin-right: 0;
+    color: white;
+  }
+
 
 .footer,
 .push {
@@ -41,6 +42,11 @@ img {
     border-radius: 4px;
     padding: 5px;
     width: 240px;
+}
+
+.imgWeather {
+    border: none;
+    width: inherit;
 }
 
 .book {
