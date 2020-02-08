@@ -1,3 +1,4 @@
+
 body {
     background-image: url('img/Back-to-School-HD-Wallpaper.jpg');
 }
@@ -66,7 +67,7 @@ img {
     padding: 0 12px 5px 12px;
 }
 
-.modal-header, h4, .close {
+.modal-header, .close {
     background-color: #5cb85c;
     color:white !important;
     text-align: center;
@@ -84,21 +85,11 @@ img {
     padding: 40px 50px;
 }
 
-.modal-header, h4, .close {
-    background-color: #5cb85c;
-    color: lightgray;
-    text-align: center;
-    font-size: 30px;
-  }
-  .modal-footer {
-    background-color: #f9f9f9;
-  }
+h4 {
+    margin-left: 90px;
+    font-size: 40px;
+}
 
-  .modal-header {
-      padding: 35px 50px;
-  }
-
-  .modal-body {
-      padding: 40px 50px;
-  }
-
+.fa-lock {
+    margin-right: 10px;
+}
