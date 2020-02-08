@@ -7,8 +7,6 @@ $(document).ready(function () {
 
     // running clock
     setInterval(function () {
-        var apiKey = 'a06d53a4d8132cb2c57dac5818e92924'
-
         //Code for date in moment.js
 
         var m = moment();
@@ -19,6 +17,10 @@ $(document).ready(function () {
 
     // updates clock every 1 second
     }, 1000);
+
+    var apiKey = 'a06d53a4d8132cb2c57dac5818e92924'
+
+
 });
 
     //Code for weather with click button
