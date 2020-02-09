@@ -36,7 +36,10 @@
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
+            <button class="btn btn-danger" id="start">Start Timer</button>
+            <div id="time"></div>
+
         </div>
         <div class="time">
             <span class="navbar-text" id="currentDay"></span>
@@ -61,11 +64,19 @@
 
                             <div class="row">
                                 <div class="studentStatus">
-                                    <div id="listName" class="rounded">Student-Status</div>
+                                    <div>
+                                    <h5 class="rounded" id="student">Students</h5>
+                                    </div>
+                                    <div class="row">
+                                    <div class="studentBox">
                                     <ul style="list-style-type:circle;" id="listStudents">
-                                        <li id="student">students</li>
-                                        <li>new student</li>
                                     </ul>
+                                    </div>
+                                    <div class="gender">
+                                        <ul style="list-style-type:circle;">
+
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +120,7 @@
                                 Name</label>
                             <input type="text" class="form-control" id="name" placeholder="Student Name">
                         </div>
-                        <button type="submit" class="btn btn-success btn-block"><span
+                        <button type="submit" class="loginBtn btn btn-success btn-block"><span
                                 class="glyphicon glyphicon-off"></span> Login</button>
                     </form>
                 </div>

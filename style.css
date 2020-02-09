@@ -57,14 +57,6 @@ img {
     margin-right: 25px;
 }
 
-#listName {
-    margin: 15px;
-    font-size: 30px;
-    font-weight: 500;
-    border: solid darkslategray;
-    padding: 0 12px 5px 12px;
-}
-
 .modal-header,
 .close {
     background-color: #5cb85c;
@@ -85,11 +77,51 @@ img {
     padding: 40px 50px;
 }
 
-h4 {
+/* h4 {
     margin-left: 90px;
     font-size: 40px;
-}
+} */
 
 .fa-lock {
     margin-right: 10px;
+}
+
+#student {
+    font-weight: bold;
+    margin: 15px 0 0 250px;
+    /* font-size: 30px; */
+    /* font-weight: 500; */
+}
+
+.list {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: normal;
+    
+}
+
+.studentBox {
+    border: solid;
+    width: 200px;
+    height: 300px;
+    margin: 10px 50px;
+}
+
+.gender {
+    height: 300px;
+    border-style: solid;
+    width: 200px;
+    margin: 10px 50px;
+    padding-left: 10px;
+    font-size: 20px;
+    
+}
+
+#time {
+    color: white;
+    margin-left: 60px;
+}
+
+.hide {
+    display: none;
 }
