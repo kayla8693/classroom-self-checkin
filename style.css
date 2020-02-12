@@ -4,7 +4,6 @@ body {
 
 .container {
     min-height: 100%;
-    margin-bottom: -70px;
 }
 
 .navbar-text {
@@ -17,16 +16,10 @@ body {
 
 a.footer {
     width: 100%;
-    height: 40px;
+    /* height: 40px; */
     text-align: center;
     margin-right: 0;
     color: white;
-  }
-
-
-.footer,
-.push {
-    height: 70px;
 }
 
 .modal {
@@ -34,7 +27,9 @@ a.footer {
 }
 
 #card-1 {
-    height: 550px;
+    /* height: 550px; */
+    margin-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 img {
@@ -57,14 +52,6 @@ img {
     margin-right: 25px;
 }
 
-#listName {
-    margin: 15px;
-    font-size: 30px;
-    font-weight: 500;
-    border: solid darkslategray;
-    padding: 0 12px 5px 12px;
-}
-
 .modal-header,
 .close {
     background-color: #5cb85c;
@@ -85,11 +72,50 @@ img {
     padding: 40px 50px;
 }
 
-h4 {
-    margin-left: 90px;
-    font-size: 40px;
-}
-
 .fa-lock {
     margin-right: 10px;
+    margin-left: 100px;
+}
+
+h4 {
+    font-size: 36px;
+}
+
+#student {
+    font-weight: bold;
+    margin: 15px 0 0 250px;
+}
+
+li {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.studentBox {
+    width: 200px;
+    margin: 10px 50px;
+}
+
+.gender {
+    width: 200px;
+    margin: 10px 50px;
+    padding-left: 10px;
+}
+
+#time {
+    color: white;
+    margin-left: 60px;
+}
+
+#newTime {
+    color: white;
+}
+
+.absent {
+    list-style-type: disc;
+}
+
+.hide {
+    display: none;
 }
