@@ -18,3 +18,17 @@ $(document).ready(function(){
   // Append Name's to Student Name Div //
   
 });
+
+// Names change color based on Present, Tardy or Absent //
+
+ function changeColor() {
+   if (seconds <= 300 && seconds > 90) {
+     document.body.style.background ="green";
+   }
+   else if (seconds <= 90 && seconds > 30) {
+     document.body.style.background = "red";
+   }
+   else {
+     document.body.style.background = "black";
+   }
+ }
