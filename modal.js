@@ -3,6 +3,7 @@ $(document).ready(function(){
   $("#myBtn").click(function(){
     $("#myModal").modal();
   });
+
   // Local Storage //
   var saveButton = $(".loginBtn");
   console.log(saveButton);
@@ -15,6 +16,7 @@ $(document).ready(function(){
     studentItem.text(studentName);
     $("#student").append(studentItem);
   });
+  
   // Append Name's to Student Name Div //
   
 });
@@ -32,3 +34,16 @@ $(document).ready(function(){
      document.body.style.background = "black";
    }
  }
+
+ // Local Storage //
+
+//  var saveButton = $(".saveButton");
+//  console.log(saveButton);
+//  saveButton.on("click", function() {
+//    console.log("click");
+//    var task = $(this)
+//      .siblings("textarea")
+//      .val();
+//    var time = $(this).attr("id");
+//    localStorage.setItem(time, task);
+//  });
