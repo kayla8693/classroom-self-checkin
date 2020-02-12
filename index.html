@@ -37,7 +37,11 @@
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
+            <button class="btn btn-danger" id="start">Start Timer</button>
+            <div id="time"></div>
+            <div id="newTime"></div>
+
         </div>
         <div class="time">
             <span class="navbar-text" id="currentDay"></span>
@@ -50,11 +54,10 @@
             <div class="row">
                 <div class="col-md-9">
 
-
                     <div class="card" id="card-1" style="width: 40rem;">
                         <div class="card-body">
                             <h5 class="card-header">
-                                <button type="button" class=" col-md-4 btn btn-primary" id="submit">Student
+                                <button type="button" class="col-md-4 btn btn-primary" id="submit">Student
                                     Check-In</button>
 
                                 <i class="fas fa-book-reader book fa-lg"></i>
@@ -62,14 +65,24 @@
 
                             <div class="row">
                                 <div class="studentStatus">
-                                    <div id="listName" class="rounded">Student-Status</div>
-                                    <ul style="list-style-type:circle;" id="listStudents">
-                                        <li id="student">students</li>
-                                        <li>new student</li>
-                                    </ul>
+                                    <div>
+                                        <h5 id="student">Students</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="studentBox">
+                                            <ul style="list-style-type:circle;" id="listStudents">
+                                            </ul>
+                                        </div>
+                                        <div class="gender">
+                                            <ul id="genderList"></ul>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
 
                 </div>
@@ -84,9 +97,6 @@
         </div>
     </div>
 
-    </div>
-    </div>
-    </div>
 
 
     <!-- Trigger the modal with a button -->
@@ -98,8 +108,9 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
+                    <h4><i class="fas fa-lock"></i> Check-In</h4>
+
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4><span class="glyphicon glyphicon-lock"></span> Check-In</h4>
                 </div>
                 <div class="modal-body">
                     <form role="form">
@@ -108,7 +119,7 @@
                                 Name</label>
                             <input type="text" class="form-control" id="name" placeholder="Student Name">
                         </div>
-                        <button type="submit" class="btn btn-success btn-block"><span
+                        <button type="submit" class="loginBtn btn btn-success btn-block"><span
                                 class="glyphicon glyphicon-off"></span> Login</button>
                     </form>
                 </div>
@@ -121,12 +132,6 @@
 
         </div>
     </div>
-
-    <div class="push"></div>
-
-    </div>
-
-    <!-- <footer class="footer"></footer>-->
 
     <nav class="navbar fixed-bottom navbar-dark bg-dark">
         <a class="footer">Copyright©</a>
@@ -151,12 +156,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-    <script src="moment.js"></script>
-
     <script src="script.js"></script>
 </body>
 
 </html>
-
-
-
