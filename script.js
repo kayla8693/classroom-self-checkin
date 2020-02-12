@@ -46,7 +46,7 @@ $(document).ready(function () {
       var forecast = "";
 
       forecast += "<p><b>" + data.name + " </b><img class='imgWeather' src=\"http://openweathermap.org/img/w/" + data.weather[0].icon + ".png\"></p>" +
-        " Temperature: " + data.main.temp + "&deg;F" + " | " + " Wind speed: " + data.wind.speed + " | Humidity: " + data.main.humidity + "%"
+        " Temperature: " + data.main.temp + "&deg;F" + " |<br> " + " Wind speed: " + data.wind.speed + " | Humidity: " + data.main.humidity + "%"
 
       $.ajax({
         url: "http://api.openweathermap.org/data/2.5/uvi",
