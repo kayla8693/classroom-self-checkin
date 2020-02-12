@@ -20,6 +20,11 @@ a.footer {
     text-align: center;
     margin-right: 0;
     color: white;
+  }
+  
+.footer,
+.push {
+    height: 70px;
 }
 
 .modal {
