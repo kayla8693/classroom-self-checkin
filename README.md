@@ -13,6 +13,7 @@ When I have my students check in,
 Then I can check presence and absences in my class.
 
 Bootstrap, JQuery and Moment.js were used in the making of this application.
-The background image is taken from: http://www.psd-dude.com/tutorials/resources/free-back-to-school-psd-backgrounds-and-brushes.aspx
+The background image is taken from: http://www.psd-dude.com/tutorials/resources/free-back-to-school-psd-backgrounds-and-brushes.aspx.
+Icons for our application were taken from: https://icons8.com/icons/set/checkmark.
 
 Creators of Application - Kayla, Inna, Randy and Colby.
