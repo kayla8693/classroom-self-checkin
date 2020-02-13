@@ -4,6 +4,7 @@ body {
 
 .container {
     min-height: 100%;
+    margin-top: 15px;
 }
 
 .navbar-text {
