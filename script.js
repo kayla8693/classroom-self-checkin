@@ -12,32 +12,20 @@ $(document).ready(function () {
             $("#myModal").modal();
         });
 
-        function setTime() {
+        var time = 130
+        var duration = moment.duration(time * 1000, 'milliseconds');
+        var interval = 1000
 
-            // Time we want to count down to
-            var countDownTime = new Date("Feb 11, 2020 18:15:00").getTime();
-            var timeEl = $('#time');
+        var timerInterval = setInterval(function () {
+            duration = moment.duration(duration.asMilliseconds() - interval, 'milliseconds');
+            var newTime = moment(duration.asMilliseconds()).format('mm:ss')
+            $('#time').text('Class starts in: ' + newTime);
 
-            var timerInterval = setInterval(function () {
+            if (newTime == '00:00') {
+                clearInterval(timerInterval);
+            };
 
-                // Time we're counting down from, which is now
-                var now = new Date().getTime();
-                // time b/w end time and now
-                var timeLeft = countDownTime - now;
-                // calculates time for minutes and seconds
-                var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-                timeEl.text('Class starts in: ' + minutes + ":" + seconds);
-                // stop timer when min and sec = 0
-                if (minutes <= 0 && seconds <= 0) {
-                    clearInterval(timerInterval);
-                }
-
-            }, 1000);
-
-        };
-        setTime();
+        }, interval);
 
         // Local Storage //
         var saveButton = $(".loginBtn");
@@ -45,20 +33,14 @@ $(document).ready(function () {
             event.preventDefault();
             var studentName = $('#name').val();
             localStorage.setItem('student-name', studentName.toUpperCase());
-            console.log(studentName);
             var studentItem = $("<li>");
             $('.studentBox').attr('style', 'border: solid');
+            $('.gender').attr('style', 'border: solid');
             studentItem.text(studentName.toUpperCase());
             $("#listStudents").append(studentItem);
             currentStudents.push(studentName);
 
-            var countDownTime = new Date("Feb 11, 2020 18:15:00").getTime();
-            var now = new Date().getTime();
-            var timeLeft = countDownTime - now;
-            var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            // GENDER AJAX CALL========================================================
+            // GENDER AJAX CALL====================================================
 
             var queryURL = "https://gender-api.com/get?name=" + studentName + "&country=US&key=GxrJHcbvZbgfvPQxMN";
 
@@ -67,19 +49,15 @@ $(document).ready(function () {
                 method: "GET"
             }).then(function (response) {
 
-                console.log(response);
                 var gender = $('<li>');
-                console.log(response.gender)
                 gender.text(response.gender.toUpperCase());
-                $('.gender').attr('style', 'border: solid');
                 $('#genderList').append(gender);
 
                 // CHANGES NAME AND GENDER COLOR===================================
 
-                console.log(students)
-                console.log(currentStudents)
+                var newTime = moment(duration.asMilliseconds()).format('mm:ss')
 
-                if (minutes >= 2) {
+                if (newTime >= '02:00') {
 
                     $(studentItem).attr('style', 'color: green');
                     $(gender).attr({
@@ -87,16 +65,18 @@ $(document).ready(function () {
                     });
                 }
 
-                else if (minutes <= 2 && seconds >= 0) {
+                else if (newTime < '02:00' && newTime > '00:00') {
                     $(studentItem).attr('style', 'color: red');
                     $(gender).attr({
                         style: 'color: red; list-style-type:circle'
                     });
                 }
 
-                else if (minutes <= 0 && seconds <= 0) {
+                else {
                     $(studentItem).attr('style', 'color: black');
-                    $(gender).addClass('absent');
+                    $(gender).attr({
+                        style: 'color: black; list-style-type: none'
+                    });
                     $(gender).html('');
 
                 };
@@ -106,12 +86,12 @@ $(document).ready(function () {
             // ====================================================================
 
             // Populates absent students in studentBox=========================
+            var newTime = moment(duration.asMilliseconds()).format('mm:ss')
 
-            if (minutes <= 0 && seconds <= 0) {
+            if (newTime <= '00:00') {
                 for (var i = 0; i < students.length; i++) {
                     if (currentStudents.includes(students[i])) {
                         delete (students[i]);
-                        console.log(students);
                     }
 
                     else {
@@ -120,15 +100,17 @@ $(document).ready(function () {
                         newItem.addClass('absent');
                         $("#listStudents").append(newItem);
                         studentItem.addClass('absent');
-                        studentItem.html("<p>You have been marked absent. Please see your teacher.</p>" + '<br>' + '<li>' + studentName.toUpperCase());
-                        $('#submit').addClass('hide');
+                        studentItem.html('<br>' + '<li>' + studentName.toUpperCase());
 
-                        // var newGender = $('<li>');
-                        // newGender.addClass('absent');
-                        // console.log(response.gender)
-                        // newGender.text(response.gender.toUpperCase());
-                        // $('.gender').attr('style', 'border: solid');
-                        // $('#genderList').append(newGender);
+                        $('.studentBox').attr('style', 'border: none');
+                        $('.gender').attr('style', 'border: none');
+
+                        var badge = $("<span>");
+                        badge.attr("class", "badge badge-warning");
+                        badge.text('You have been marked absent. Please see your teacher');
+                        badge.prependTo(studentItem);
+
+                        $('#submit').addClass('hide');
                     };
                 };
             };
@@ -151,18 +133,9 @@ $(document).ready(function () {
 
         // updates clock every 1 second
     }, 1000);
-    // ===============================================================================
+    // ============================================================================
+
     console.log("ready");
-
-    // ------------------------------------------------------------------------------------------------
-
-    //Code for date in moment.js
-
-    var m = moment();
-    var curDay = m.format("dddd, MMMM Do YYYY h:mm:ss a");
-    console.log(m.format("dddd, MMMM Do YYYY h:mm:ss a"));
-
-    $("#currentDay").text(curDay);
 
     //Weather API Call=============================================================
     var apiKey = '13002b03031d9418e8a4593147cb8d89';
@@ -178,7 +151,7 @@ $(document).ready(function () {
             var forecast = "";
 
             forecast += "<p><b>" + data.name + " </b><img class='imgWeather' src=\"https://openweathermap.org/img/w/" + data.weather[0].icon + ".png\"></p>" +
-                " Temperature: " + data.main.temp + "&deg;F" + " |<br>" + " Wind speed: " + data.wind.speed + " mph| Humidity: " + data.main.humidity + "%"
+                " Temperature: " + data.main.temp + "&deg;F" + " |<br>" + " Wind speed: " + data.wind.speed + " mph | Humidity: " + data.main.humidity + "%"
 
             $.ajax({
                 url: "https://api.openweathermap.org/data/2.5/uvi",
@@ -188,40 +161,9 @@ $(document).ready(function () {
                 success: function (data) {
                     forecast += " |<br> " + "UVI: " + data.value
 
-
                     $("#current-section").html(forecast);
                 }
             });
-
-            // //Div class container should have two div ids:
-            // // div id = "start-screen" with a background and button <button id="start" class="start-btn">Go!</button>
-            // $(".start-btn").on("click", function (event) {
-            //     event.preventDefault();
-            //     //div id = "main-screen"
-            //     // $( ".main-screen" ).hide();
-            // })
-
-            // //Local Storage //Put in the very beginning
-            // var events = ["", "", "", "", "", "", "", "", ""]
-            // events = JSON.parse(localStorage.getItem("events")) || {};
-
-            // //Local Storage//Can be placed in a different place
-
-            // $(document).on("click", ".saveBtn", function (event) {
-            //     event.preventDefault();
-            //     console.log(this);
-            //     var userInput = $(this).siblings(".description").val();
-
-            //     var hour = $(this).attr("id");
-
-            //     console.log("hour", hour);
-            //     events[hour] = userInput;
-            //     console.log("events", events);
-            //     localStorage.setItem("events", JSON.stringify(events));
-            // }
-            // })
-            // })
-
         }
     });
     // ============================================================================
