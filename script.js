@@ -137,8 +137,6 @@ $(document).ready(function () {
 
     console.log("ready");
 
-      forecast += "<p><b>" + data.name + " </b><img class='imgWeather' src=\"http://openweathermap.org/img/w/" + data.weather[0].icon + ".png\"></p>" +
-        " Temperature: " + data.main.temp + "&deg;F" + " |<br> " + " Wind speed: " + data.wind.speed + " | Humidity: " + data.main.humidity + "%"
     //Weather API Call=============================================================
     var apiKey = '13002b03031d9418e8a4593147cb8d89';
     var city = "Dallas, US";
