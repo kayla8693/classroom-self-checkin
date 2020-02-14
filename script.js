@@ -12,7 +12,8 @@ $(document).ready(function () {
             $("#myModal").modal();
         });
 
-        var time = 130
+        // Creates timer; referenced Andrei on stackoverflow======================================================
+        var time = 120
         var duration = moment.duration(time * 1000, 'milliseconds');
         var interval = 1000
 
@@ -26,6 +27,7 @@ $(document).ready(function () {
             };
 
         }, interval);
+        // =======================================================================================================
 
         // Local Storage //
         var saveButton = $(".loginBtn");
@@ -42,7 +44,7 @@ $(document).ready(function () {
 
             // GENDER AJAX CALL====================================================
 
-            var queryURL = "https://gender-api.com/get?name=" + studentName + "&country=US&key=GxrJHcbvZbgfvPQxMN";
+            var queryURL = "https://gender-api.com/get?name=" + studentName + "&country=US&key=JQwRqcyXLZjYqaDrEQ";
 
             $.ajax({
                 url: queryURL,
@@ -57,7 +59,7 @@ $(document).ready(function () {
 
                 var newTime = moment(duration.asMilliseconds()).format('mm:ss')
 
-                if (newTime >= '02:00') {
+                if (newTime >= '01:00') {
 
                     $(studentItem).attr('style', 'color: green');
                     $(gender).attr({
@@ -65,7 +67,7 @@ $(document).ready(function () {
                     });
                 }
 
-                else if (newTime < '02:00' && newTime > '00:00') {
+                else if (newTime < '01:00' && newTime > '00:00') {
                     $(studentItem).attr('style', 'color: red');
                     $(gender).attr({
                         style: 'color: red; list-style-type:circle'
@@ -95,20 +97,21 @@ $(document).ready(function () {
                     }
 
                     else {
-                        var newItem = $("<li>");
-                        newItem.text(students[i].toUpperCase());
-                        newItem.addClass('absent');
-                        $("#listStudents").append(newItem);
                         studentItem.addClass('absent');
                         studentItem.html('<br>' + '<li>' + studentName.toUpperCase());
-
-                        $('.studentBox').attr('style', 'border: none');
-                        $('.gender').attr('style', 'border: none');
 
                         var badge = $("<span>");
                         badge.attr("class", "badge badge-warning");
                         badge.text('You have been marked absent. Please see your teacher');
                         badge.prependTo(studentItem);
+
+                        var newItem = $("<li>");
+                        newItem.addClass('absent');
+                        newItem.text(students[i].toUpperCase());
+                        $("#listStudents").append(newItem);
+
+                        $('.studentBox').attr('style', 'border: none');
+                        $('.gender').attr('style', 'border: none');
 
                         $('#submit').addClass('hide');
                     };

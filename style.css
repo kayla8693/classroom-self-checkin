@@ -1,10 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url('img/Back-to-School-HD-Wallpaper.jpg');
+    background-image: url(../classroom-self-checkin/img/school-supplies-background-free.jpg);
+    background-size: cover;
 }
 
 .container {
     min-height: 100%;
-    margin-top: 15px;
+    margin-top: 100px;
+}
+
+a.navbar-brand {
+    margin-right: 80px;
 }
 
 .navbar-text {
@@ -15,18 +24,14 @@ body {
     color: white;
 }
 
+a {
+    color: white !important
+}
+
 a.footer {
     width: 100%;
-    /* height: 40px; */
     text-align: center;
     margin-right: 0;
-    color: white;
-  }
-  
-.footer,
-.push {
-    height: 70px;
-}
 
 .modal {
     margin-bottom: 20px;
@@ -125,3 +130,4 @@ li {
 .hide {
     display: none;
 }
+  
