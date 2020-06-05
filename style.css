@@ -1,11 +1,19 @@
+* {
+    box-sizing: border-box;
+}
 
 body {
-    background-image: url('img/Back-to-School-HD-Wallpaper.jpg');
+    background-image: url(../classroom-self-checkin/img/school-supplies-background-free.jpg);
+    background-size: cover;
 }
 
 .container {
     min-height: 100%;
-    margin-bottom: -70px;
+    margin-top: 100px;
+}
+
+a.navbar-brand {
+    margin-right: 80px;
 }
 
 .navbar-text {
@@ -13,22 +21,17 @@ body {
 }
 
 #currentDay {
-color: white;
-
+    color: white;
 }
 
-
-footer {
-    position: relative;
-    bottom: 0;
-    background: #666666;
-    border-top: 8px solid #4aaaa5;
-    margin-top: 20px;
+a {
+    color: white !important
 }
 
-.footer,
-.push {
-    height: 70px;
+a.footer {
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
 }
 
 .modal {
@@ -36,7 +39,9 @@ footer {
 }
 
 #card-1 {
-    height: 550px;
+    /* height: 550px; */
+    margin-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 img {
@@ -46,6 +51,10 @@ img {
     width: 240px;
 }
 
+.imgWeather {
+    border: none;
+    width: inherit;
+}
 
 .book {
     margin-left: 15px;
@@ -55,20 +64,14 @@ img {
     margin-right: 25px;
 }
 
-#listName {
-    margin: 15px;
-    font-size: 30px;
-    font-weight: 500;
-    border: solid darkslategray;
-    padding: 0 12px 5px 12px;
-}
-
-.modal-header, h4, .close {
+.modal-header,
+.close {
     background-color: #5cb85c;
-    color:white !important;
+    color: white !important;
     text-align: center;
     font-size: 30px;
-  }
+}
+
 .modal-footer {
     background-color: #f9f9f9;
 }
@@ -81,20 +84,51 @@ img {
     padding: 40px 50px;
 }
 
-.modal-header, h4, .close {
-    background-color: #5cb85c;
-    color: lightgray;
-    text-align: center;
-    font-size: 30px;
-  }
-  .modal-footer {
-    background-color: #f9f9f9;
-  }
+.fa-lock {
+    margin-right: 10px;
+    margin-left: 100px;
+}
 
-  .modal-header {
-      padding: 35px 50px;
-  }
+h4 {
+    font-size: 36px;
+}
 
+#student {
+    font-weight: bold;
+    margin: 15px 0 0 250px;
+}
 
-      padding: 40px 50px;
-  }
+li {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.studentBox {
+    width: 200px;
+    margin: 10px 50px;
+}
+
+.gender {
+    width: 200px;
+    margin: 10px 50px;
+    padding-left: 10px;
+}
+
+#time {
+    color: white;
+    margin-left: 60px;
+}
+
+#newTime {
+    color: white;
+}
+
+.absent {
+    list-style-type: disc;
+}
+
+.hide {
+    display: none;
+}
+  

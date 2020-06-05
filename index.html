@@ -1,30 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="modal.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hey Y'all!</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel='shortcut icon' type='image/png' href='../classroom-self-checkin/img/icons8-checkmark-50.png'>
 </head>
+
 <body>
 
-<div class="container">
-  <h2>Student Check-In</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-default btn-lg" id="myBtn">Check-In</button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-school fa-2x animated bounce"></i>
+        </a>
+        <a class="navbar-brand animated bounce" href="#">Welcome Back</a>
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Check-In</h4>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+            <button class="btn btn-danger animated bounce" id="start">Start Timer</button>
+            <div id="time"></div>
+
         </div>
+        <div class="time animated bounce">
+            <span class="navbar-text" id="currentDay"></span>
+        </div>
+<<<<<<< HEAD
         <div class="modal-body">
           <form role="form">
             <div class="form-group">
@@ -36,10 +54,94 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+=======
+    </nav>
+
+
+    <div class="container">
+
+        <div class="d-flex justify-content-center">.
+            <div class="row">
+                <div class="col-md-9">
+
+                    <div class="card animated bounce" id="card-1" style="width: 40rem;">
+                        <div class="card-body">
+                            <h5 class="card-header">
+                                <button type="button" class="col-md-4 btn btn-primary animated bounce"
+                                    id="submit">Student Check-In
+                                </button>
+
+                                <i class="fas fa-book-reader book fa-lg animated bounce"></i>
+                            </h5>
+
+                            <div class="row">
+                                <div class="studentStatus">
+                                    <div>
+                                        <h5 class="animated bounce" id="student">Students</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="studentBox">
+                                            <ul style="list-style-type:circle;" id="listStudents">
+                                            </ul>
+                                        </div>
+                                        <div class="gender">
+                                            <ul id="genderList"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card animated bounce">
+                        <div class="card-header"><strong>School Day Weather:</strong></div>
+                        <div class="card-body" id="current-section"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      
     </div>
+
+
+    <!-- Trigger the modal with a button -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4><i class="fas fa-lock"></i> Check-In</h4>
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Student
+                                Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Student Name">
+                        </div>
+                        <button type="submit" class="loginBtn btn btn-success btn-block"><span
+                                class="glyphicon glyphicon-off"></span> Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span
+                            class="glyphicon glyphicon-remove"></span>Cancel
+                    </button>
+                </div>
+            </div>
+
+>>>>>>> f0e281fd4002a61e6b120dd03129ec4453aac2de
+        </div>
+    </div>
+<<<<<<< HEAD
   </div> 
 </div>
 
@@ -51,3 +153,34 @@
   <ul style="list-style-type:circle;" id="listStudents">
       <li id="student">students</li>
       <li>new student</li>
+=======
+
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        <a class="footer">Copyright©</a>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+>>>>>>> f0e281fd4002a61e6b120dd03129ec4453aac2de
